@@ -1,0 +1,91 @@
+template : |
+  This is a very important task. You are an expert summarizer who can understand and syntesize
+  knowledge at a very high level.
+  
+  I am going to start by giving you a couple examples of articles along with their
+  summarizations.
+
+  Here is article A: {articleA}
+
+  Here is summarization A: {summarizationA}
+
+  Here is article B: {articleB}
+ 
+  Here is summarization B: {summarizationB}
+
+
+  I want you to start by noticing that these summaries are generated using only direct quotes
+  from the articles. This is the goal of the task. I need you to ultimately arrive at a
+  summary that uses direct quotes from the text.
+
+  The article you will read and summarize is here: ```{summarizeMe}```
+
+  1. I need you to start by reading and gaining an understanding of the article in
+  triple backticks. Provide a short summary of the key points.
+
+  2. I need you to choose some of key direct quotes from the text, and explain how they
+  relate to the summary you provided.
+
+  3. I need you to use the quotes you just provided, along with other direct to perform a
+  complete summarization of the article in backticks. USE ONLY QUOTES FROM THE TEXT. This
+  summary MUST be less than 250 words. In synthesizing the information, you will inevitably
+  concatenate phrases from different sentences to form new ones. When you do this, you must
+  use the notation "..." to indicate that you have done so (as seen in the examples). Put the
+  "..." between phrases concatenated from different sentences.
+  
+  4. Validate your summary for part 3. Make sure it is less than 250 words, and that each
+  phrase is a quote from the text. Make sure that phrases from different sentences have been
+  concatenated with the "..." notation in between. If there are phrases that are not quotes,
+  remove them and replace them with quotes that retain the key ideas.
+  
+  5. Make sure this summary is in line with the summary you first generated. Remember, do not
+  add anything to this final summary that is not a quote from the article.
+  
+  This is a really important task and I need you to stay focused. I really appreciate your
+  help.
+  
+  Please output your work as a string that can be read using json_load with each number
+  as a key and your answer as the value.
+  
+  If there is an error or you cannot summarize the article, return a json with keys
+  1-5 mapped to empty strings.
+
+articleA :
+  The U.S. Supreme Court on Monday declined to hear an American steel importer's bid to invalidate tariffs on certain steel products based on the argument that former President Donald Trump exceeded his authority in imposing them in 2020.
+  The justices turned away an appeal by Irving, Texas-based PrimeSource Building Products of a lower court's decision to uphold a 25% tariff on some steel derivatives, such as nails and fasteners, put in place by Trump on national security grounds and now defended by President Joe Biden's administration.
+  During Trump's presidency, the United States placed multiple rounds of tariffs on steel products starting in 2018 after then-Commerce Secretary Wilbur Ross found that imports threatened national security by eroding demand for U.S. steel and depressing the use of domestic steel-producing capacity.
+  Trump in March 2018 invoked a Cold War-era trade law in ordering a 25% tariff on various imported steel articles including flat-rolled products, tubes and pipes. In January 2020, Trump ordered that the tariffs apply also to derivatives of the earlier-covered steel articles.
+  PrimeSource, St. Louis-based Huttig Building Products and Omani company Oman Fasteners challenged the tariffs on steel derivatives, arguing that the U.S. Congress never granted the president broad power over foreign trade to impose them.
+  The Manhattan-based U.S. Court of International Trade struck down the steel derivatives tariffs in 2021, saying the White House missed statutory deadlines to impose them.
+  But the Washington-based U.S. Court of Appeals for the Federal Circuit in February reversed that decision, citing its own 2022 ruling that presidents are authorized to impose "contingency-dependent" tariff increases to fulfill their original national security objectives, if those objectives remain valid.
+  Trump imposed the 2020 tariffs to "close a loophole exploited by steel-derivatives importers ... to address a specific form of circumvention," Judge Richard Taranto wrote in the Federal Circuit's decision.
+  Biden's administration had urged the Supreme Court not to take up the appeal.
+  PrimeSource appealed to the Supreme Court in July. Oman Fasteners filed a separate appeal on Oct. 20 that is currently pending.
+  In imposing steel tariffs in 2018, Trump invoked Section 232 of the Trade Act of 1962, which allows a U.S. president to restrict imports of goods critical to national security. Exemptions were granted to some countries. The tariffs became an irritant in foreign relations including with European allies.
+  Trump at the time said the tariffs were necessary for national security to maintain healthy domestic production, and said the United States was committed to building its ships, planes and other military equipment with American steel.
+  During his presidency, Trump rattled the world trade order by imposing unilateral tariffs to combat what he called unfair trade practices by China, the European Union and other major U.S. trading partners. China and some other countries retaliated by imposing tariffs on U.S. goods.
+  The Supreme Court in March turned away a challenge to the 2018 tariffs by a group of U.S.-based steel importers. The justices in 2022 refused to hear a separate challenge by steel companies to Trump's 2018 decision to double tariffs on steel imports from Turkey, also on national security grounds.
+
+articleB :
+  U.S. Senator Joe Manchin, D-W.Va., is raising concern over a proposed federal Environmental Protection Agency rule that would impact the mining of metallurgical coal.
+  Manchin, chairman of the U.S. Senate Committee on Energy and Natural Resources, is asking EPA Administrator Michael Regan to reconsider the rule that amends the National Emissions Standards for Hazardous Air Pollutants for coke ovens. Coke is a critical fuel used in the steelmaking process that is created by heating metallurgical coal.
+  
+  Metallurgical coal, which is produced in West Virginia, is in return a key component in the production of steel.
+  
+  The West Virginia Democrat said the new EPA rule will hurt the Mountain State.
+  
+  “EPA’s proposals introduce new and unwarranted regulatory demands on coke production, which would harm employment prospects in West Virginia, the viability of coke production for the sole two U.S.-based steel blast furnace operators, and the local steel industry crucial for electric vehicles, pipelines, infrastructure growth, solar panels, geothermal plants and other vital sectors,” Manchin wrote in the letter to Regan.
+  
+  Manchin said the Biden administration’s plan seeks to decrease metallurgical coal at a time when the need for domestic steel production is growing. Furthermore, he said the Bipartisan Infrastructure Law calls for more infrastructure projects that require steel production.
+  
+  “While crafting new regulations for the steel and coke industries, it is crucial for the EPA to carefully balance economic, employment, and environmental factors,” Manchin added in the letter to Regan. “Unfortunately, the proposed rules appear to disregard this principle. If put into practice, these regulations could decrease coke consumption in the United States precisely when domestic steel production is more vital than ever, leading to reduced demand for metallurgical coal in West Virginia.”
+  
+  If less metallurgical coal is mined, it would pose a threat to steel production, according to Manchin.
+  
+  “West Virginia is the leading supplier of metallurgical coal used in coke production in the United States,” Manchin added in the letter to Regan. “In 2021, our state was home to an extensive workforce of over 11,503 miners, encompassing both underground and surface jobs. Despite a gradual decrease in the number of mining jobs over the years due to declining demand for thermal coal, the demand for metallurgical coal, along with the employment opportunities it generates, remains robust. Respected coke suppliers like SunCoke Energy are integral to the supply chains of the final two steel blast furnace operators in the nation, U.S. Steel and Cleveland Cliffs, who rely on metallurgical coal-derived coke from West Virginia to produce resilient, lightweight steel for the American market.”
+
+summarizationB :
+  “U.S. Senator Joe Manchin, D-W.Va., is raising concern over a proposed federal Environmental Protection Agency rule that would impact the mining of metallurgical coal. Manchin, chairman of the U.S. Senate Committee on Energy and Natural Resources, is asking EPA Administrator Michael Regan to reconsider the rule that amends the National Emissions Standards for Hazardous Air Pollutants for coke ovens… The West Virginia Democrat said the new EPA rule will hurt the Mountain State. ‘EPA’s proposals introduce new and unwarranted regulatory demands on coke production, which would harm employment prospects in West Virginia, the viability of coke production for the sole two U.S.-based steel blast furnace operators, and the local steel industry crucial for electric vehicles, pipelines, infrastructure growth, solar panels, geothermal plants and other vital sectors,’ Manchin wrote in the letter to Regan. Manchin said the Biden administration’s plan seeks to decrease metallurgical coal at a time when the need for domestic steel production is growing. Furthermore, he said the Bipartisan Infrastructure Law calls for more infrastructure projects that require steel production. ‘While crafting new regulations for the steel and coke industries, it is crucial for the EPA to carefully balance economic, employment, and environmental factors,’ Manchin added in the letter to Regan. ‘Unfortunately, the proposed rules appear to disregard this principle. If put into practice, these regulations could decrease coke consumption in the United States precisely when domestic steel production is more vital than ever, leading to reduced demand for metallurgical coal in West Virginia.’ If less metallurgical coal is mined, it would pose a threat to steel production, according to Manchin. ‘West Virginia is the leading supplier of metallurgical coal used in coke production in the United States,’ Manchin added in the letter to Regan… ‘Respected coke suppliers like SunCoke Energy are integral to the supply chains of the final two steel blast furnace operators in the nation, U.S. Steel and Cleveland Cliffs, who rely on metallurgical coal-derived coke from West Virginia to produce resilient, lightweight steel for the American market.’”
+
+summarizationA :
+  “The U.S. Supreme Court on Monday declined to hear an American steel importer's bid to invalidate tariffs on certain steel products based on the argument that former President Donald Trump exceeded his authority in imposing them in 2020. The justices turned away an appeal by Irving, Texas-based PrimeSource Building Products of a lower court's decision to uphold a 25% tariff on some steel derivatives, such as nails and fasteners, put in place by Trump on national security grounds and now defended by President Joe Biden's administration… Trump in March 2018 invoked a Cold War-era trade law in ordering a 25% tariff on various imported steel articles including flat-rolled products, tubes and pipes… PrimeSource, St. Louis-based Huttig Building Products and Omani company Oman Fasteners challenged the tariffs on steel derivatives, arguing that the U.S. Congress never granted the president broad power over foreign trade to impose them… Trump imposed the 2020 tariffs to ‘close a loophole exploited by steel-derivatives importers ... to address a specific form of circumvention,’ Judge Richard Taranto wrote in the Federal Circuit's decision… The tariffs became an irritant in foreign relations including with European allies… During his presidency, Trump rattled the world trade order by imposing unilateral tariffs to combat what he called unfair trade practices by China, the European Union and other major U.S. trading partners… The Supreme Court in March turned away a challenge to the 2018 tariffs by a group of U.S.-based steel importers. The justices in 2022 refused to hear a separate challenge by steel companies to Trump's 2018 decision to double tariffs on steel imports from Turkey, also on national security grounds.”
