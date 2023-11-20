@@ -1,5 +1,8 @@
 import requests
+from IPython.core.display_functions import display
 from bs4 import BeautifulSoup
+import ipywidgets as widgets
+
 
 
 def scrape_news_article(url):
@@ -28,3 +31,28 @@ def scrape_news_article(url):
     except requests.exceptions.RequestException as e:
         print(f"Error accessing the URL: {e}")
         return None
+
+def get_user_input():
+    # Create a text box widget for user input
+    input_text = widgets.Text(value='', placeholder='Enter text...', description='Input:', disabled=False)
+
+    # Create a button widget
+    button = widgets.Button(description="Submit")
+
+    # Output widget to display the result
+    output_result = widgets.Output()
+
+    # Function to handle button click event
+    def on_button_click(b):
+        user_input = input_text.value
+        with output_result:
+            print("Key received, beginning processing")
+
+    # Assign the function to the button click event
+    button.on_click(on_button_click)
+
+    # Display the widgets
+    display(widgets.VBox([input_text, button, output_result]))
+    return input_text.value
+
+

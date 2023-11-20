@@ -15,6 +15,5 @@ def process_excel(file_path, key):
     summaries = generate_summary(url_to_article.values(), model)
 
     df['summary'] = summaries
-    os.chdir('/content/articlesum')
     df.to_excel("output.xlsx")
     return
