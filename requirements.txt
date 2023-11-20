@@ -5,3 +5,4 @@ beautifulsoup4
 pandas
 pyyaml
 ipywidgets
+IPython.core.display_functions
