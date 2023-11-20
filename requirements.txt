@@ -1,2 +1,6 @@
 langchain
 openai
+requests
+beautifulsoup4
+pandas
+pyyaml
