@@ -1,5 +1,4 @@
 import requests
-from IPython.core.display_functions import display
 from bs4 import BeautifulSoup
 import ipywidgets as widgets
 
