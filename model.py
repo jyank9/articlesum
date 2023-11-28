@@ -13,7 +13,7 @@ with open('prompts/prompts.yaml', 'r') as file:
 def create_model(key):
     os.environ['OPENAI_API_KEY'] = key
 
-    llm = ChatOpenAI(temperature=0.3, model="gpt-4-1106-preview")
+    llm = ChatOpenAI(temperature=0, model="gpt-4-1106-preview")
     prompt = PromptTemplate.from_template(prompts['template'])
     chain = LLMChain(prompt=prompt, llm=llm)
 
